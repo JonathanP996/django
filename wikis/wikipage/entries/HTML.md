@@ -1,2 +1,2 @@
 HTML
-HTML is a markup language that can be used to define the structure of a web page. 
+HTML is a coding markup language and is normally used on webpages.

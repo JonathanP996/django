@@ -1,2 +1,2 @@
 Django
-Django is a web framework written using Python that allows for the design of web applications that generate HTML dynamically.
+Django is a web framework using python and is often used on websites

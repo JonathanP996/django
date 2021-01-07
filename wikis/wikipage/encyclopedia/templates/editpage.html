@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+ | Edit {{title}}
+{% endblock %}
+
+{% block body %}
+
+{% if available == True %}
+<div role="alert">
+already exists</div>
+{%endif%}
+<div style="padding-top:75;">
+    <form method="POST">
+        {%csrf_token%}
+
+        <h1>Edits page for {{title}}</h1>
+        <textarea name="newcontent"  style="width: 60%;
+                    margin-top: 50px;">{{content}}</textarea>
+
+        <button type="submit" style="margin-top: 25px; border-color:aqua; ">Save edit</button>
+    </form>
+</div>
+
+
+{% endblock %}
