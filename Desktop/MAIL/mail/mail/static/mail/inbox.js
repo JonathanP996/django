@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // By default, load the inbox
   load_mailbox('inbox');
 });
-
 function compose_email() {
 
   // Show compose view and hide other views
   document.querySelector('#emails-view').style.display = 'none';
   document.querySelector('#compose-view').style.display = 'block';
+
 
   // Clear out composition fields
   document.querySelector('#compose-recipients').value = '';
@@ -29,5 +29,10 @@ function load_mailbox(mailbox) {
   document.querySelector('#compose-view').style.display = 'none';
 
   // Show the mailbox name
-  document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
+  //document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
+  document.querySelector('#emails-view').className = `${mailbox}`;
+  document.querySelector('#emails-view');
+  document.getElementById("Subject1").innerHTML = compose-subject;
+  document.getElementById("Body1").innerHTML = compose-body;
+
 }

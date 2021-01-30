@@ -3,16 +3,25 @@
 
 {% block body %}
     <h2>{{ request.user.email }}</h2>
-
     <button class="btn btn-sm btn-outline-primary" id="inbox">Inbox</button>
     <button class="btn btn-sm btn-outline-primary" id="compose">Compose</button>
-    <a class="btn btn-sm btn-outline-primary" id="sent" href="mail/sent.html">Sent</a>
+    <button class="btn btn-sm btn-outline-primary" id="sent">Sent</button>
     <button class="btn btn-sm btn-outline-primary" id="archived">Archived</button>
     <a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
     <hr>
 
     <div id="emails-view">
-    </div>
+        <table style="width:100%">
+            <tr>
+              <th>Subject</th>
+              <th>body</th>
+            </tr>
+            <tr>
+              <td id="Subject1">Subject</td>
+              <td id="Body1">body</td>
+            </tr>
+          </table>
+        </div>
 
     <div id="compose-view">
         <h3>New Email</h3>
@@ -34,6 +43,5 @@
 
 {% block script %}
     <script src="{% static 'mail/inbox.js' %}">
-    let form = document.querySelectorAll('compose-form')
     </script>
 {% endblock %}

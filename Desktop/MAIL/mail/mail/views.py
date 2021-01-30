@@ -22,10 +22,7 @@ def index(request):
         return HttpResponseRedirect(reverse("login"))
 
 def composed(request):
-    subject = data.get("subject", "")
-    body = data.get("body", "")
-    return render(request, "mail/sent.html")
-
+    print("hello")
 
 
 
@@ -102,7 +99,6 @@ def mailbox(request, mailbox):
     # Return emails in reverse chronologial order
     emails = emails.order_by("-timestamp").all()
     return JsonResponse([email.serialize() for email in emails], safe=False)
-
 
 @csrf_exempt
 @login_required
